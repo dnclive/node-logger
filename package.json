@@ -1,0 +1,28 @@
+{
+  "name": "logger",
+  "version": "0.0.0",
+  "description": "Debug and logger for node",
+  "type": "module",
+  "main": "index.js",
+  "exports": "index.js",
+  "scripts": {
+    "test": "node src/tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnclive/node-logger.git"
+  },
+  "keywords": [
+    "Debug",
+    "Logger"
+  ],
+  "author": "Vladimir Zhlobentsev <vladimir.zhlobentsev@gmail.com> (https://github.com/dnclive)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnclive/node-logger/issues"
+  },
+  "homepage": "https://github.com/dnclive/node-logger#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
