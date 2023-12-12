@@ -1,7 +1,7 @@
 
 //import {test, expect} from  "@jest/globals"
 
-import Logger from "../index.js"
+import Logger from "#mod/index.mjs"
 
 const {deb, log} = Logger({
   conf:{
@@ -21,7 +21,7 @@ test('adds 1 + 2 to equal 3', () => {
 // debs
 deb(0, "deb_mess_1", {key: "val"})
 deb(1, "deb_mess_2", {key: "val"})
-deb(10, "deb_mess_2", {key: "val"})
+deb(10, "deb_mess_3", {key: "val"})
 
 // logs
 log('LOG', 0, "LOG_MESS_1", "var1", 1, "VAR2", 2)

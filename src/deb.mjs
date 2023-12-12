@@ -23,7 +23,7 @@ export default ({
   url,
   debGroup,
   debGroups,
-  levels
+  debLevels
 }) => {
     //if (args === undefined) args = {}
     //const url = args.url
@@ -31,15 +31,17 @@ export default ({
     //const filename =
     //    url !== undefined ? new URL(url).pathname.split('/').pop() : undefined
 
+    //console.log(debGroup, debGroups, debLevels)
     return (...params) => {
         if (!isDebug) return
         const level = typeof params[0] === 'number' ? params.shift() : 0
         //console.log("deb.log", level)
         // if log debug group is debugging
         // and log have level index and debugging index not specified
+        //console.log(level, isDebug, params, debGroups.indexOf(debGroup), (debLevels.length !== 0 ? debLevels : [0]).indexOf(level), (debLevels.length !== 0 ? debLevels : [0]))
         if (
             debGroups.indexOf(debGroup) > -1 &&
-            (levels.length !== 0 ? levels : [0]).indexOf(level) > -1
+            (debLevels.length !== 0 ? debLevels : [0]).indexOf(level) > -1
         ) {
             console.info('\n ')
             //if (filename !== undefined) console.info(`${filename}`)
