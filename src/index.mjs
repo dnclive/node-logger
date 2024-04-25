@@ -12,5 +12,5 @@ export default ({conf, debGroup}) => ({
     debGroups: conf.debGroups||[],
     debLevels: conf.debLevels||[]
   }),
-  log: Log({logLevel: conf.logLevel})
+  ...Log({logLevel: conf.logLevel})
 })
