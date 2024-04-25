@@ -10,7 +10,7 @@
  * @param args                              complex arg
  */
 
-export default ({logLevel}) => {
+export default ({debGroup, logLevel}) => {
   return {
     log: (...params)=> {
       const type = params.shift()
@@ -34,7 +34,7 @@ export default ({logLevel}) => {
       }
     },
     fUndef: msg => {
-      console.error(msg + ' undefined')
+      console.error(debGroup+'.'+msg+' undefined')
       return undefined
     }
   }
