@@ -33,7 +33,7 @@ export default ({debGroup, logLevel}) => {
         }
       }
     },
-    fUndef: msg => {
+    fUndef: msg => () => {
       console.error(debGroup+'.'+msg+' undefined')
       return undefined
     }
