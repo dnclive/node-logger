@@ -19,9 +19,9 @@
   "scripts": {
     "esbuild": "node src/esbuilder.mjs",
     "test": "node tests/index.js",
-    "bump_patch": "sh/bump_ver_3.sh patch",
-    "bump_minor": "sh/bump_ver_3.sh minor",
-    "bump_major": "sh/bump_ver_3.sh major"
+    "bump_patch": "sh/bump_ver_3.sh patch --git --test --publish",
+    "bump_minor": "sh/bump_ver_3.sh minor --git --test --publish",
+    "bump_major": "sh/bump_ver_3.sh major --git --test --publish"
   },
   "repository": {
     "type": "git",

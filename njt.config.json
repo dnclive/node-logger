@@ -1,5 +1,5 @@
 {
   "localDeps": {
-    "@dnclive/node-js-tools": "file:../node-js-tools",
+    "@dnclive/node-js-tools": "file:../node-js-tools"
   }
 }
