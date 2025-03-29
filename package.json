@@ -1,6 +1,6 @@
 {
   "name": "@dnclive/logger",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Debug and logger for node",
   "type": "module",
   "main": "build/index.js",
