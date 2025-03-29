@@ -17,6 +17,9 @@
     "build": "./build"
   },
   "scripts": {
+    "_npm_install": "sh/npm.sh -i",
+    "_use_local_deps": "sh/npm.sh --update --localDeps --useLocalDeps",
+    "_use_npm_deps": "sh/npm.sh --update --localDeps --useNpmDeps",
     "esbuild": "node src/esbuilder.mjs",
     "test": "node tests/index.js",
     "bump_patch": "sh/bump_ver_3.sh patch --git --test --publish",
@@ -42,8 +45,10 @@
     "npm": ">=9.0.0 <12.0.0"
   },
   "devDependencies": {
-    "@dnclive/node-js-tools": "^0.0.24",
     "esbuild": "^0.19.9",
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@dnclive/node-js-tools": "^0.0.25"
   }
 }
