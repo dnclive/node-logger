@@ -21,6 +21,7 @@ export const isDebug = process.env.NODE_ENV!=='production'
 
 export default ({
   url,
+  debModule='',
   debGroup,
   debGroups,
   debLevels
@@ -31,7 +32,7 @@ export default ({
     //const filename =
     //    url !== undefined ? new URL(url).pathname.split('/').pop() : undefined
 
-    //console.log(debGroup, debGroups, debLevels)
+    //console.log(debModule, debGroup, debGroups, debLevels)
     return (...params) => {
         if (!isDebug) return
         const level = typeof params[0] === 'number' ? params.shift() : 0
@@ -45,7 +46,7 @@ export default ({
         ) {
             console.info('\n ')
             //if (filename !== undefined) console.info(`${filename}`)
-            console.info(`*** ${debGroup}.${level} ***`)
+            console.info(`*** ${debModule}.${debGroup}.${level} ***`)
             params.forEach((param) => {
                 console.info(param)
             });

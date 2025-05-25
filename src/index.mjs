@@ -9,6 +9,7 @@ import Log from "#mod/log.mjs"
 export default ({conf, debGroup}) => ({
   deb: Deb({
     debGroup,
+    debModule: conf.debModule,
     debGroups: conf.debGroups||[],
     debLevels: conf.debLevels||[]
   }),
